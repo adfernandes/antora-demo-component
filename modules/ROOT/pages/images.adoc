@@ -1,0 +1,54 @@
+= Images via Kroki
+
+Excercising several types here...
+
+== GraphViz
+
+[graphviz]
+----
+digraph foo {
+  node [style=rounded]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"]
+  node1 -> node2 -> node3
+}
+----
+
+== PlantUML
+
+[plantuml]
+----
+@startuml
+hide empty description
+[*] --> State1
+State1 --> [*]
+State1 : this is a string
+State1 : this is another string
+State1 -> State2
+State2 --> [*]
+@enduml
+----
+
+and
+
+[plantuml]
+----
+@startjson
+{
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
+}
+@endjson
+----
+
+== Mermaid
+
+[mermaid]
+----
+sequenceDiagram
+    Alice ->> John: Hello John, how are you?
+    John -->> Alice: Great!
+    Alice -) John: See you later!
+----
